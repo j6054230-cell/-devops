@@ -1,0 +1,7 @@
+#!/bin/bash
+exec &> log.txt
+
+echo "Start"
+
+ls /wrong
+echo "End"
