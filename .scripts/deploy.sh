@@ -2,7 +2,7 @@
 set -e
 echo "🚀 Starting deployment..."
 # Navigate to your application directory
-cd /var/www/your-python-app
+cd /home/jamshid/my-python-app
 echo "📥 Pulling latest code from GitHub..."
 git pull origin production
 echo "🔧 Activating virtual environment..."
