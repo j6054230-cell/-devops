@@ -41,5 +41,6 @@ jobs:
         key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /var/www/your-python-app
-          ./.scripts/deploy.sh
+          cd /home/jamshid/my-python-app
+          git pull origin production
+          bash .scripts/deploy.sh
