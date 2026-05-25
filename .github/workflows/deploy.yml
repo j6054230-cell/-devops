@@ -1,0 +1,19 @@
+name: Node.js Web App Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodni yuklab olish
+        uses: actions/checkout@v4
+
+      - name: Docker image build qilish
+        run: docker build -t devops-web-app:latest .
+
+      - name: Test ko'rinishida konteynerni tekshirish
+        run: docker run -d -p 3000:3000 --name test_app devops-web-app:latest
